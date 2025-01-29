@@ -51,6 +51,36 @@ body, html {
     z-index: 1;
 }
 
+.menu-btn {
+    position: absolute;
+    padding: 10px 15px;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #FFD700;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 10;
+}
+
+#pauseMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    z-index: 100;
+    display: none;
+}
+
 .btn:hover {
     background-color: #840595;
     transform: translateY(-5px);
@@ -77,6 +107,10 @@ body, html {
     border-radius: 50%;
     transform: translateX(-50%, -50%); 
     /* z-index: -1; */
+}
+
+.hidden {
+    display: none;
 }
 
 /* Footer Styling */

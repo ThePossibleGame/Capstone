@@ -34,3 +34,4 @@ function animateBall() {
 
 // Start the animation
 animateBall();
+

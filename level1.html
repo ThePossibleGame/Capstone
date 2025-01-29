@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Possible Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
 
-<body> 
-    <p> the link is working </p>
-</body>
+    <title>The Possible Game</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <div id="pauseMenu" class="hidden">
+        <button class="btn" id="resumeBtn">Resume</button> 
+        <button class="btn" id="levelSelectBtn">Level Select</button>
+        <button class="btn" id="homeBtn">Home</button>
+    </div>
+    
+    <button class="menu-btn" id="pauseBtn">Menu</button>
+    <script src="test.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
