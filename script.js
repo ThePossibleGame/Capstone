@@ -1,37 +1,37 @@
-const ball = document.querySelector('.ball');
+const square = document.querySelector('.square');
 
-let ballPositionX = 100; // initial horizontal position
-let ballPositionY = 100; // initial vertical position
-let ballVelocityX = 2; // horizontal velocity (speed)
-let ballVelocityY = 2; // vertical velocity (speed)
-const ballDiameter = 50; // diameter of the ball
+let squarePositionX = 100; // initial horizontal position
+let squarePositionY = 100; // initial vertical position
+let squareVelocityX = 2; // horizontal velocity (speed)
+let squareVelocityY = 2; // vertical velocity (speed)
+const squareSize = 50; // Size of the square
 
 const screenWidth = window.innerWidth; // screen width
 const screenHeight = window.innerHeight; // screen height
 
-function animateBall() {
-    // Update the ball's position
-    ballPositionX += ballVelocityX;
-    ballPositionY += ballVelocityY;
+function animatesquare() {
+    // Update the square's position
+    squarePositionX += squareVelocityX;
+    squarePositionY += squareVelocityY;
 
     // Bounce off the left and right walls
-    if (ballPositionX <= 0 || ballPositionX + ballDiameter >= screenWidth) {
-        ballVelocityX *= -1; // reverse horizontal direction
+    if (squarePositionX <= 0 || squarePositionX + squareSize >= screenWidth) {
+        squareVelocityX *= -1; // reverse horizontal direction
     }
 
     // Bounce off the top and bottom walls
-    if (ballPositionY <= 0 || ballPositionY + ballDiameter >= screenHeight) {
-        ballVelocityY *= -1; // reverse vertical direction
+    if (squarePositionY <= 0 || squarePositionY + squareSize >= screenHeight) {
+        squareVelocityY *= -1; // reverse vertical direction
     }
 
-    // Set the ball's new position
-    ball.style.left = ballPositionX + 'px';
-    ball.style.top = ballPositionY + 'px';
+    // Set the square's new position
+    square.style.left = squarePositionX + 'px';
+    square.style.top = squarePositionY + 'px';
 
     // Request the next frame to keep the animation going
-    requestAnimationFrame(animateBall);
+    requestAnimationFrame(animatesquare);
 }
 
 // Start the animation
-animateBall();
+animatesquare();
 
